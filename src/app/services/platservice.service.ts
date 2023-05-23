@@ -7,16 +7,18 @@ import { Observable, catchError, tap, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class PlatserviceService {
-   private readonly Platapi = 'api/plats.json';
+   private readonly Platapi = '/api/plats.json';
 
   constructor(private http: HttpClient) { }
 
   public getPlats():Observable<IPlats[]>{
-   return this.http.get<IPlats[]>(this.Platapi).pipe(
-    tap(plats => console.log('plats:', plats),
-    catchError(this.handleError)
-    )
-   )
+   return this.http.get<IPlats[]>(this.Platapi)
+  //  .pipe(
+  //   tap(plats => console.log('plats:', plats),
+  //   catchError(this.handleError)
+  //   )
+  //  )
+  
   }
 
 

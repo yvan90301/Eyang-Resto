@@ -46,6 +46,13 @@ export class ListComponent {
     //   next:plats => this.plats= plats,
     //   error: err=>this.errMsg = err
     // })
+    // this.liste()
+   
   }
-  
+  //  liste(){
+  //   this.platservice.getPlats().subscribe((response:any)=>{
+  //     console.log(response)
+  //     this.plats = response
+  //   })
+  //  }
 }
